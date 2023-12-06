@@ -1,0 +1,46 @@
+Algoritmo "Apresent_Codigo_usando_Vetor"
+// Disciplina   : Algoritmos e Programação
+// Professor   : Fabricio Herpich
+
+// Descrição   : Programa com vetores utilizando o conhecimento das
+// cores primárias
+
+// Autor(a)    : Adrion Montelli Costa
+// Data atual  : 01/10/2023
+Var
+// Declarações das variáveis
+cor_primaria : vetor[1..3] de caractere
+cor : caractere
+indice : inteiro
+corEhPrimaria : logico
+
+Inicio
+
+// Atribuição "valores" às variáveis
+   cor_primaria[1] <- "vermelho"
+   cor_primaria[2] <- "amarelo"
+   cor_primaria[3] <- "azul"
+
+// Leia o nome da cor escrita pelo usuário
+   escreval("Escreva uma cor primária em letras MINÚSCULAS: ")
+   leia(cor)
+
+// Atribuindo 'falso' à variável, ou seja, zerando ela
+   corEhPrimaria <- falso
+
+// Para de 1 até 3 (3 cores primárias)
+   para indice de 1 ate 3 faca
+      se cor = cor_primaria[indice] entao
+         corEhPrimaria <- verdadeiro
+      fimse
+   fimpara
+
+   se corEhPrimaria entao
+      escreval("")
+      escreva("Parabéns! A cor ", cor, " é uma cor primária.")
+   senao
+   escreval("")
+      escreva("Errado! Tente novamente, pois a cor ", cor, " não é uma cor primária.")
+   fimse
+
+Fimalgoritmo

@@ -1,0 +1,41 @@
+Algoritmo "TAREFA_2_REGISTROS"
+// ADRION MONTELLI COSTA
+//Dado que para cada aluno de uma turma de 10 alunos se tenha:
+//número de matrícula, nome e média final, faça um algoritmo que:
+//Imprime o nome e a média final de cada aluno;
+//Imprime a média geral da turma;
+
+tipo
+   aluno = registro
+      nome: caractere
+      numeroMatricula: inteiro
+      mediaFinal: real
+   fimregistro
+
+Var
+   turma: vetor [1..10] de aluno
+   mediaGeral : real
+   indice: inteiro
+
+Inicio
+
+   para indice de 1 ate 10 passo 1 faca
+      escreval("Digite o nome do aluno: ")
+      leia(turma[indice].nome)
+      escreval("Digite o número de matricula do aluno: ")
+      leia(turma[indice].numeroMatricula)
+      escreval("Digite a media final do aluno: ")
+      leia(turma[indice].mediaFinal)
+      mediaGeral <- mediaGeral + (turma[indice].mediaFinal)
+      escreval()
+   fimpara
+
+   para indice de 1 ate 10 passo 1 faca
+      escreval ("O nome do ", indice, " º aluno é ", turma[indice].nome, ". Seu número de matricula é ", turma[indice].numeroMatricula, " e a média final do aluno é ", turma[indice].mediaFinal)
+   fimpara
+   escreval("A média geral da turma é ", mediaGeral/10)
+Fimalgoritmo
+
+
+
+
